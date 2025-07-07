@@ -372,3 +372,31 @@ a{
     margin-right: -0.5rem;
 }
 
+@media (max-width: 800px) {
+  .main {
+    flex-direction: column;
+    height: auto;
+    padding: 0.2rem;
+  }
+  .sidebar {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 0.5rem;
+  }
+  .main_content {
+    margin: 0;
+    border-radius: 0 0 1rem 1rem;
+    padding: 0.5rem;
+  }
+  .music_player {
+    position: static;
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+  }
+  .card {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
