@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="sidebar-ovl" id="sidebar-ovl"></div>
     <div class="main">
         <div class="sidebar">
             <div class="hamburger" id="hamburger-menu" tabindex="0" aria-label="Open navigation menu">
@@ -173,5 +174,19 @@
             </div>
         </div>
     </div>
+    <script>
+    // Hamburger menu toggle for mobile sidebar
+    const hamburger = document.getElementById('hamburger-menu');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebar-ovl');
+    hamburger.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('active');
+    });
+    overlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      overlay.classList.remove('active');
+    });
+    </script>
 </body>
 </html>
